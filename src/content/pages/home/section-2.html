@@ -22,25 +22,24 @@
   </div>
 
   <div class="mt-6 columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5">
-    <!-- Item 1: AI Chat Solution -->
     <article
-      class="glass-card group break-inside-avoid mb-5 overflow-hidden transition-shadow"
+      class="glass-card group break-inside-avoid mb-5 overflow-hidden transition-shadow" loopsource="recent_work_items" loopvariable="work"
     >
-      <div class="relative aspect-[16/9]">
+      <div class="aspect-recent">
         <picture>
           <source
             type="image/webp"
             srcset="
-              {{ site.theme.link }}/public/recent-work/f16eab49-7c29-4933-aca8-f41b2c337f6f_800w_300w.webp 300w,
-              {{ site.theme.link }}/public/recent-work/f16eab49-7c29-4933-aca8-f41b2c337f6f_800w_400w.webp 400w,
-              {{ site.theme.link }}/public/recent-work/f16eab49-7c29-4933-aca8-f41b2c337f6f_800w_600w.webp 600w,
-              {{ site.theme.link }}/public/recent-work/f16eab49-7c29-4933-aca8-f41b2c337f6f_800w.webp 800w
+              {{ site.theme.link }}/public/recent-work/{{ work.meta('featured_image')|replace({'.jpg': ''}) }}_300w.webp 300w,
+              {{ site.theme.link }}/public/recent-work/{{ work.meta('featured_image')|replace({'.jpg': ''}) }}_400w.webp 400w,
+              {{ site.theme.link }}/public/recent-work/{{ work.meta('featured_image')|replace({'.jpg': ''}) }}_600w.webp 600w,
+              {{ site.theme.link }}/public/recent-work/{{ work.meta('featured_image')|replace({'.jpg': ''}) }}.webp 800w
             "
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 400px, 400px"
           >
           <img
-            src="{{ site.theme.link }}/public/recent-work/f16eab49-7c29-4933-aca8-f41b2c337f6f_800w.jpg"
-            alt="Voiceflow chatbot interface"
+            src="{{ site.theme.link }}/public/recent-work/{{ work.meta('featured_image') }}"
+            alt="{{ work.meta('image_alt') }}"
             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
             loading="lazy"
           />
@@ -61,266 +60,12 @@
             stroke-linejoin="round"
             class="w-4 h-4"
           >
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            {{ work.meta('icon_svg_path')|raw }}
           </svg>
-          <span>AI Chat</span>
+          <span>{{ work.meta('category_type') }}</span>
         </div>
-        <h3 class="mt-2 text-base font-semibold tracking-tight">Lead Qualification Bot</h3>
-        <p class="text-sm text-neutral-600 mt-1">Voiceflow chatbot that qualifies leads, books meetings, and syncs with CRM. Achieved 67% qualification rate.</p>
-      </div>
-    </article>
-
-    <!-- Item 2: Voice Agent -->
-    <article
-      class="glass-card group break-inside-avoid mb-5 overflow-hidden transition-shadow"
-    >
-      <div class="relative aspect-[4/3]">
-        <picture>
-          <source
-            type="image/webp"
-            srcset="
-              {{ site.theme.link }}/public/recent-work/41f44e91-a4d8-4042-8253-0c6a79be833b_800w_300w.webp 300w,
-              {{ site.theme.link }}/public/recent-work/41f44e91-a4d8-4042-8253-0c6a79be833b_800w_400w.webp 400w,
-              {{ site.theme.link }}/public/recent-work/41f44e91-a4d8-4042-8253-0c6a79be833b_800w_600w.webp 600w,
-              {{ site.theme.link }}/public/recent-work/41f44e91-a4d8-4042-8253-0c6a79be833b_800w.webp 800w
-            "
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 400px, 400px"
-          >
-          <img
-            src="{{ site.theme.link }}/public/recent-work/41f44e91-a4d8-4042-8253-0c6a79be833b_800w.jpg"
-            alt="Voice agent system"
-            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-            loading="lazy"
-          />
-        </picture>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
-      </div>
-      <div class="p-4 border-t border-neutral-200">
-        <div class="flex items-center gap-2 text-xs text-neutral-500">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="w-4 h-4"
-          >
-            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
-            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-            <line x1="12" x2="12" y1="19" y2="22"></line>
-          </svg>
-          <span>Voice Agent</span>
-        </div>
-        <h3 class="mt-2 text-base font-semibold tracking-tight">Appointment Scheduler</h3>
-        <p class="text-sm text-neutral-600 mt-1">
-          Voice AI for phone scheduling with ElevenLabs. Natural conversations with 94% booking success rate.
-        </p>
-      </div>
-    </article>
-
-    <!-- Item 3: N8N Automation -->
-    <article
-      class="glass-card group break-inside-avoid mb-5 overflow-hidden transition-shadow"
-    >
-      <div class="relative aspect-[4/3]">
-        <picture>
-          <source
-            type="image/webp"
-            srcset="
-              {{ site.theme.link }}/public/recent-work/7fc6a2de-15db-4034-8a23-06b7a43997f6_800w_300w.webp 300w,
-              {{ site.theme.link }}/public/recent-work/7fc6a2de-15db-4034-8a23-06b7a43997f6_800w_400w.webp 400w,
-              {{ site.theme.link }}/public/recent-work/7fc6a2de-15db-4034-8a23-06b7a43997f6_800w_600w.webp 600w,
-              {{ site.theme.link }}/public/recent-work/7fc6a2de-15db-4034-8a23-06b7a43997f6_800w.webp 800w
-            "
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 400px, 400px"
-          >
-          <img
-            src="{{ site.theme.link }}/public/recent-work/7fc6a2de-15db-4034-8a23-06b7a43997f6_800w.jpg"
-            alt="Workflow automation"
-            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-            loading="lazy"
-          />
-        </picture>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
-      </div>
-      <div class="p-4 border-t border-neutral-200">
-        <div class="flex items-center gap-2 text-xs text-neutral-500">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="w-4 h-4"
-          >
-            <rect width="8" height="8" x="3" y="3" rx="2"></rect>
-            <path d="M7 11v4a2 2 0 0 0 2 2h4"></path>
-            <rect width="8" height="8" x="13" y="13" rx="2"></rect>
-          </svg>
-          <span>Automation</span>
-        </div>
-        <h3 class="mt-2 text-base font-semibold tracking-tight">Customer Onboarding Flow</h3>
-        <p class="text-sm text-neutral-600 mt-1">N8N workflow connecting Stripe, email, Slack, and CRM. Reduced onboarding time by 75%.</p>
-      </div>
-    </article>
-
-    <!-- Item 4: Knowledge Base -->
-    <article
-      class="glass-card group break-inside-avoid mb-5 overflow-hidden transition-shadow"
-    >
-      <div class="relative aspect-[16/9]">
-        <picture>
-          <source
-            type="image/webp"
-            srcset="
-              {{ site.theme.link }}/public/recent-work/a2cd53da-e321-41c2-9467-565b1a1b0b52_800w_300w.webp 300w,
-              {{ site.theme.link }}/public/recent-work/a2cd53da-e321-41c2-9467-565b1a1b0b52_800w_400w.webp 400w,
-              {{ site.theme.link }}/public/recent-work/a2cd53da-e321-41c2-9467-565b1a1b0b52_800w_600w.webp 600w,
-              {{ site.theme.link }}/public/recent-work/a2cd53da-e321-41c2-9467-565b1a1b0b52_800w.webp 800w
-            "
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 400px, 400px"
-          >
-          <img
-            src="{{ site.theme.link }}/public/recent-work/a2cd53da-e321-41c2-9467-565b1a1b0b52_800w.jpg"
-            alt="Knowledge base system"
-            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-            loading="lazy"
-          />
-        </picture>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
-      </div>
-      <div class="p-4 border-t border-neutral-200">
-        <div class="flex items-center gap-2 text-xs text-neutral-500">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="w-4 h-4"
-          >
-            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
-          </svg>
-          <span class="">AI Chat</span>
-        </div>
-        <h3 class="mt-2 text-base font-semibold tracking-tight">Auto-Update Knowledge Base</h3>
-        <p class="text-sm text-neutral-600 mt-1">
-          Chatbot that crawls docs and auto-updates responses. Maintains 98% accuracy on support queries.
-        </p>
-      </div>
-    </article>
-
-    <!-- Item 5: MVP Platform -->
-    <article
-      class="glass-card group break-inside-avoid mb-5 overflow-hidden transition-shadow"
-    >
-      <div class="relative aspect-[16/9]">
-        <picture>
-          <source
-            type="image/webp"
-            srcset="
-              {{ site.theme.link }}/public/recent-work/f826149d-7e8d-4b68-a4fd-cc16fb762142_800w_300w.webp 300w,
-              {{ site.theme.link }}/public/recent-work/f826149d-7e8d-4b68-a4fd-cc16fb762142_800w_400w.webp 400w,
-              {{ site.theme.link }}/public/recent-work/f826149d-7e8d-4b68-a4fd-cc16fb762142_800w_600w.webp 600w,
-              {{ site.theme.link }}/public/recent-work/f826149d-7e8d-4b68-a4fd-cc16fb762142_800w.webp 800w
-            "
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 400px, 400px"
-          >
-          <img
-            src="{{ site.theme.link }}/public/recent-work/f826149d-7e8d-4b68-a4fd-cc16fb762142_800w.jpg"
-            alt="SaaS platform"
-            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-            loading="lazy"
-          />
-        </picture>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
-      </div>
-      <div class="p-4 border-t border-neutral-200">
-        <div class="flex items-center gap-2 text-xs text-neutral-500">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="w-4 h-4"
-          >
-            <rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect>
-            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-          </svg>
-          <span>MVP Development</span>
-        </div>
-        <h3 class="mt-2 text-base font-semibold tracking-tight">SaaS Chat Platform</h3>
-        <p class="text-sm text-neutral-600 mt-1">
-          Full-stack React + Laravel platform. Shipped MVP in 6 weeks, scaled to 500 users.
-        </p>
-      </div>
-    </article>
-
-    <!-- Item 6: Observability -->
-    <article
-      class="glass-card group break-inside-avoid mb-5 overflow-hidden transition-shadow"
-    >
-      <div class="relative aspect-[4/3]">
-        <picture>
-          <source
-            type="image/webp"
-            srcset="
-              {{ site.theme.link }}/public/recent-work/36460156-d7ce-43aa-89af-e013fb87ccfc_800w_300w.webp 300w,
-              {{ site.theme.link }}/public/recent-work/36460156-d7ce-43aa-89af-e013fb87ccfc_800w_400w.webp 400w,
-              {{ site.theme.link }}/public/recent-work/36460156-d7ce-43aa-89af-e013fb87ccfc_800w_600w.webp 600w,
-              {{ site.theme.link }}/public/recent-work/36460156-d7ce-43aa-89af-e013fb87ccfc_800w.webp 800w
-            "
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 400px, 400px"
-          >
-          <img
-            src="{{ site.theme.link }}/public/recent-work/36460156-d7ce-43aa-89af-e013fb87ccfc_800w.jpg"
-            alt="Analytics dashboard"
-            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-            loading="lazy"
-          />
-        </picture>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
-      </div>
-      <div class="p-4 border-t border-neutral-200">
-        <div class="flex items-center gap-2 text-xs text-neutral-500">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="w-4 h-4"
-          >
-            <path d="M3 3v18h18"></path>
-            <path d="m19 9-5 5-4-4-3 3"></path>
-          </svg>
-          <span class="">Observability</span>
-        </div>
-        <h3 class="mt-2 text-base font-semibold tracking-tight">Agent Performance Dashboard</h3>
-        <p class="text-sm text-neutral-600 mt-1">
-          Real-time monitoring for chatbot KPIs. Tracks response times, sentiment, and conversion rates.
-        </p>
+        <h3 class="mt-2 text-base font-semibold tracking-tight">{{ work.title }}</h3>
+        <p class="text-sm text-neutral-600 mt-1">{{ work.excerpt.read_more('') }}</p>
       </div>
     </article>
   </div>

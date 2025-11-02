@@ -36,6 +36,8 @@
     "patterns:push": "cd ../../.. && wp pattern push --all",
     "content:pull": "cd ../../.. && wp content pull --all",
     "content:push": "cd ../../.. && wp content push --all",
+    "content:pull:work": "cd ../../.. && wp content pull --post_type=recent-work",
+    "content:push:work": "cd ../../.. && wp content push --post_type=recent-work",
     "page:pull": "THEME=$(basename $(pwd)) && cd ../../.. && wp page pull --all && cd wp-content/themes/$THEME && npx prettier --write \"src/content/pages/**/*.html\"",
     "page:push": "cd ../../.. && wp page push --all",
     "template:pull": "THEME=$(basename $(pwd)) && for file in templates/*.html; do [ -f \"$file\" ] && cd ../../.. && wp template pull $(basename \"$file\" .html) && cd wp-content/themes/$THEME; done",

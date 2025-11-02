@@ -520,3 +520,156 @@ This directory stores ACF field group definitions as JSON for version control. U
 
 **Version:** 1.0.0
 **Last Updated:** 2025-01-21
+
+
+### Example Post Type JSON
+
+```json
+{
+    "key": "post_type_68f313acee3cb",
+    "title": "Projects",
+    "menu_order": 0,
+    "active": true,
+    "post_type": "project",
+    "advanced_configuration": true,
+    "import_source": "",
+    "import_date": "",
+    "labels": {
+        "name": "Projects",
+        "singular_name": "Project",
+        "menu_name": "Projects",
+        "all_items": "All Projects",
+        "edit_item": "Edit Project",
+        "view_item": "View Project",
+        "view_items": "View Projects",
+        "add_new_item": "Add New Project",
+        "add_new": "Add New Project",
+        "new_item": "New Project",
+        "parent_item_colon": "Parent Project:",
+        "search_items": "Search Projects",
+        "not_found": "No projects found",
+        "not_found_in_trash": "No projects found in Trash",
+        "archives": "Project Archives",
+        "attributes": "Project Attributes",
+        "featured_image": "",
+        "set_featured_image": "",
+        "remove_featured_image": "",
+        "use_featured_image": "",
+        "insert_into_item": "Insert into project",
+        "uploaded_to_this_item": "Uploaded to this project",
+        "filter_items_list": "Filter projects list",
+        "filter_by_date": "Filter projects by date",
+        "items_list_navigation": "Projects list navigation",
+        "items_list": "Projects list",
+        "item_published": "Project published.",
+        "item_published_privately": "Project published privately.",
+        "item_reverted_to_draft": "Project reverted to draft.",
+        "item_scheduled": "Project scheduled.",
+        "item_updated": "Project updated.",
+        "item_link": "Project Link",
+        "item_link_description": "A link to a project."
+    },
+    "description": "",
+    "public": true,
+    "hierarchical": false,
+    "exclude_from_search": false,
+    "publicly_queryable": true,
+    "show_ui": true,
+    "show_in_menu": true,
+    "admin_menu_parent": "",
+    "show_in_admin_bar": true,
+    "show_in_nav_menus": true,
+    "show_in_rest": true,
+    "rest_base": "",
+    "rest_namespace": "wp\/v2",
+    "rest_controller_class": "WP_REST_Posts_Controller",
+    "menu_position": "",
+    "menu_icon": {
+        "type": "dashicons",
+        "value": "dashicons-admin-post"
+    },
+    "rename_capabilities": false,
+    "singular_capability_name": "post",
+    "plural_capability_name": "posts",
+    "supports": [
+        "title",
+        "editor",
+        "thumbnail",
+        "custom-fields"
+    ],
+    "taxonomies": "",
+    "has_archive": true,
+    "has_archive_slug": "projects",
+    "rewrite": {
+        "permalink_rewrite": "post_type_key",
+        "with_front": "1",
+        "feeds": "0",
+        "pages": "1"
+    },
+    "query_var": "post_type_key",
+    "query_var_name": "",
+    "can_export": true,
+    "delete_with_user": false,
+    "register_meta_box_cb": "",
+    "enter_title_here": "",
+    "modified": 1761047915
+}
+```
+
+
+### Example Field Group JSON 
+
+```json
+
+{
+    "key": "group_releasing_soon",
+    "title": "Resource Settings",
+    "fields": [
+        {
+            "key": "field_releasing_soon",
+            "label": "Releasing Soon",
+            "name": "releasing_soon",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Toggle on to show the 'Coming Soon' notification form instead of displaying the full article.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Show 'Coming Soon' form (article not yet published)",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "resource"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "modified": 1761757932
+}
+
+```

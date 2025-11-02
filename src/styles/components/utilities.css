@@ -24,3 +24,39 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Recent Work aspect ratios - specific to each of the 6 work items */
+.aspect-recent {
+  position: relative;
+  width: 100%;
+}
+
+/* Item 1: Lead Qualification Bot - 16:9 */
+article:nth-child(1) .aspect-recent {
+  aspect-ratio: 16 / 9;
+}
+
+/* Item 2: Appointment Scheduler - 4:3 */
+article:nth-child(2) .aspect-recent {
+  aspect-ratio: 4 / 3;
+}
+
+/* Item 3: Customer Onboarding Flow - 4:3 */
+article:nth-child(3) .aspect-recent {
+  aspect-ratio: 4 / 3;
+}
+
+/* Item 4: Auto-Update Knowledge Base - 16:9 */
+article:nth-child(4) .aspect-recent {
+  aspect-ratio: 16 / 9;
+}
+
+/* Item 5: SaaS Chat Platform - 16:9 */
+article:nth-child(5) .aspect-recent {
+  aspect-ratio: 16 / 9;
+}
+
+/* Item 6: Agent Performance Dashboard - 4:3 */
+article:nth-child(6) .aspect-recent {
+  aspect-ratio: 4 / 3;
+}
