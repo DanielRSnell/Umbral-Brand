@@ -1,0 +1,122 @@
+/* Custom dark syntax highlighting theme */
+/* Base: #272729 background, #3f90fe accent */
+
+/* Hide scrollbars on pre/code blocks */
+pre::-webkit-scrollbar,
+code::-webkit-scrollbar {
+  display: none;
+}
+
+pre,
+code {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hljs {
+  background: transparent !important; /* No background - inherit from pre */
+  color: #e8e8e8 !important; /* Light gray text */
+  padding: 0 !important; /* Remove default padding, let pre handle it */
+  border-radius: 0 !important; /* Remove default radius */
+}
+
+/* Keywords (import, const, async, function, return, await) */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #ff6b9d !important; /* Pink/red for keywords */
+  font-weight: 500;
+}
+
+/* Strings */
+.hljs-string,
+.hljs-attr {
+  color: #a5d6a7 !important; /* Green for strings */
+}
+
+/* Functions and methods */
+.hljs-title,
+.hljs-title.function_,
+.hljs-title.class_ {
+  color: #3f90fe !important; /* Primary blue accent for functions */
+  font-weight: 500;
+}
+
+/* Built-in functions and methods */
+.hljs-built_in {
+  color: #3f90fe !important; /* Primary blue accent */
+}
+
+/* Types (string, number, etc) */
+.hljs-type,
+.hljs-class,
+.hljs-params {
+  color: #80d4ff !important; /* Light blue for types */
+}
+
+/* Variables, properties, params */
+.hljs-variable,
+.hljs-property,
+.hljs-subst {
+  color: #e8e8e8 !important; /* Default light gray */
+}
+
+/* Comments */
+.hljs-comment,
+.hljs-quote {
+  color: #9ca3af !important; /* Lighter gray for better contrast on dark backgrounds */
+  font-style: italic;
+}
+
+/* Numbers, literals, boolean */
+.hljs-number,
+.hljs-literal,
+.hljs-boolean {
+  color: #ffa07a !important; /* Light orange for numbers */
+}
+
+/* Operators, symbols */
+.hljs-operator,
+.hljs-symbol,
+.hljs-bullet {
+  color: #d4d4d4 !important; /* Light gray */
+}
+
+/* Punctuation */
+.hljs-punctuation {
+  color: #b4b4b4 !important; /* Medium gray */
+}
+
+/* Meta, decorators (@trace, etc) */
+.hljs-meta,
+.hljs-meta .hljs-keyword {
+  color: #c792ea !important; /* Purple for decorators */
+}
+
+/* Attributes */
+.hljs-attribute {
+  color: #82aaff !important; /* Blue for attributes */
+}
+
+/* Emphasis */
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+/* Tag names */
+.hljs-tag,
+.hljs-name {
+  color: #ff6b9d !important; /* Pink/red */
+}
+
+/* Deletion/addition (for diffs) */
+.hljs-deletion {
+  color: #f44336 !important;
+}
+
+.hljs-addition {
+  color: #4caf50 !important;
+}

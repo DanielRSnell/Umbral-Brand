@@ -1,0 +1,9 @@
+{
+    "src": {
+        "styles": true,
+        "scripts": true,
+        "editor": true,
+        "archive_options": true
+    },
+    "inline_css": true
+}

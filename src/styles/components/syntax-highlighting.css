@@ -1,0 +1,47 @@
+/**
+ * Syntax Highlighting Classes
+ *
+ * Color classes for code syntax highlighting in code blocks.
+ * Based on GitHub's syntax highlighting color scheme.
+ */
+
+/* Keywords - from, import, def, return, class, etc. */
+.syntax-keyword {
+  color: #d73a49;
+}
+
+/* Module/library names - FastAPI, OpenAI, etc. */
+.syntax-module {
+  color: #005cc5;
+}
+
+/* Variables and parameters */
+.syntax-variable {
+  color: #e36209;
+}
+
+/* Decorators and method calls - @app.post, .create */
+.syntax-decorator {
+  color: #6f42c1;
+}
+
+/* String literals */
+.syntax-string {
+  color: #032f62;
+}
+
+/* Comments */
+.syntax-comment {
+  color: #6a737d;
+  font-style: italic;
+}
+
+/* Numbers */
+.syntax-number {
+  color: #005cc5;
+}
+
+/* Operators */
+.syntax-operator {
+  color: #d73a49;
+}

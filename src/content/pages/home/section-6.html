@@ -1,0 +1,401 @@
+<section
+  id="services"
+  class="sm:px-6 sm:mt-20 max-w-7xl border-neutral-200 border-t mt-16 mr-auto ml-auto pt-10 pr-4 pl-4"
+>
+  <div class="glass-section relative overflow-hidden rounded-3xl">
+    <div class="relative z-10 sm:p-8 md:p-12 pt-5 pr-5 pb-5 pl-5">
+      <div class="flex items-start justify-between">
+        <div class="flex items-center gap-2 text-xs text-neutral-500">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-3.5 w-3.5"
+          >
+            <rect width="8" height="8" x="3" y="3" rx="2"></rect>
+            <path d="M7 11v4a2 2 0 0 0 2 2h4"></path>
+            <rect width="8" height="8" x="13" y="13" rx="2"></rect>
+          </svg>
+          <span>AI Engineering Services</span>
+        </div>
+        <div class="flex items-baseline gap-2">
+          <h2 class="sm:text-6xl md:text-7xl leading-[1.05] text-5xl tracking-tight font-semibold text-neutral-900">
+            Services.
+          </h2>
+        </div>
+      </div>
+      <div class="glass-panel overflow-hidden mt-8" x-data="{ activeItem: null }">
+        <div class="accordion-item">
+          <button
+            x-on:click="activeItem = activeItem === 1 ? null : 1"
+            class="w-full text-left flex items-center gap-4 justify-between p-4 sm:p-5"
+          >
+            <div class="text-[11px] text-neutral-500">(001)</div>
+            <div class="flex-1 min-w-0">
+              <p class="font-medium tracking-tight text-neutral-900">AI Chat Solutions</p>
+            </div>
+            <div
+              class="shrink-0 h-8 w-8 rounded-full ring-1 flex items-center justify-center bg-neutral-200 ring-neutral-300 text-neutral-900"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4"
+                x-show="activeItem !== 1"
+              >
+                <path d="M5 12h14"></path>
+                <path d="M12 5v14"></path>
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4"
+                x-show="activeItem === 1"
+                x-cloak
+              >
+                <path d="M5 12h14"></path>
+              </svg>
+            </div>
+          </button>
+          <div x-show="activeItem === 1" x-collapse class="sm:p-6 pt-4 pr-4 pb-4 pl-4">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+              <div class="lg:col-span-7">
+                <div>
+                  <h3 class="font-medium tracking-tight text-neutral-900">Conversational AI interfaces</h3>
+                  <p class="text-sm mt-1 text-neutral-600">
+                    Smart chatbots built with Voiceflow and custom integrations. From lead qualification to customer support, I design conversational flows that understand context and deliver results.
+                  </p>
+                </div>
+              </div>
+              <div class="lg:col-span-5">
+                <div class="flex items-center justify-between">
+                  <p class="text-xs text-neutral-600">Features</p>
+                </div>
+                <div class="mt-3 flex flex-wrap gap-2">
+                  <span class="inline-flex items-center rounded-full text-xs px-2.5 py-1 bg-neutral-900 text-neutral-50">
+                    Voiceflow
+                  </span>
+                  <span class="glass-badge inline-flex items-center rounded-full text-neutral-900 text-xs px-2.5 py-1">
+                    NLP
+                  </span>
+                  <span class="glass-badge inline-flex items-center rounded-full text-neutral-900 text-xs px-2.5 py-1">
+                    Intent matching
+                  </span>
+                  <span class="glass-badge inline-flex items-center rounded-full text-neutral-900 text-xs px-2.5 py-1">
+                    Multi-channel
+                  </span>
+                  <span class="glass-badge inline-flex items-center rounded-full text-neutral-900 text-xs px-2.5 py-1">
+                    Analytics
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="mt-6">
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center rounded-xl px-4 py-2.5 text-sm font-medium shadow-sm transition-colors bg-neutral-900 text-neutral-50 hover:bg-neutral-800"
+              >
+                Get Started
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-4 w-4 ml-2"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item border-t border-neutral-200">
+          <button
+            x-on:click="activeItem = activeItem === 2 ? null : 2"
+            class="w-full text-left flex items-center gap-4 justify-between p-4 sm:p-5"
+          >
+            <div class="text-[11px] text-neutral-500">(002)</div>
+            <div class="flex-1 min-w-0">
+              <p class="font-medium tracking-tight text-neutral-900">AI Voice Agents</p>
+            </div>
+            <div
+              class="shrink-0 h-8 w-8 rounded-full ring-1 flex items-center justify-center bg-neutral-200 ring-neutral-300 text-neutral-900"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4"
+                x-show="activeItem !== 2"
+              >
+                <path d="M5 12h14"></path>
+                <path d="M12 5v14"></path>
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4"
+                x-show="activeItem === 2"
+                x-cloak
+              >
+                <path d="M5 12h14"></path>
+              </svg>
+            </div>
+          </button>
+          <div x-show="activeItem === 2" x-collapse class="p-4 sm:p-6">
+            <p class="text-sm text-neutral-600">
+              Voice-enabled AI assistants using ElevenLabs and Voiceflow. Natural-sounding conversations for phone support, appointment scheduling, and customer engagement with real-time speech recognition and synthesis.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item border-t border-neutral-200">
+          <button
+            x-on:click="activeItem = activeItem === 3 ? null : 3"
+            class="w-full text-left flex items-center gap-4 justify-between p-4 sm:p-5"
+          >
+            <div class="text-[11px] text-neutral-500">(003)</div>
+            <div class="flex-1 min-w-0">
+              <p class="font-medium tracking-tight text-neutral-900">Automation Workflows</p>
+            </div>
+            <div
+              class="shrink-0 h-8 w-8 rounded-full ring-1 flex items-center justify-center bg-neutral-200 ring-neutral-300 text-neutral-900"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4"
+                x-show="activeItem !== 3"
+              >
+                <path d="M5 12h14"></path>
+                <path d="M12 5v14"></path>
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4"
+                x-show="activeItem === 3"
+                x-cloak
+              >
+                <path d="M5 12h14"></path>
+              </svg>
+            </div>
+          </button>
+          <div x-show="activeItem === 3" x-collapse class="p-4 sm:p-6">
+            <p class="text-sm text-neutral-600">
+              End-to-end workflow automation using N8N and custom integrations. Connect your tools, automate repetitive tasks, and build intelligent workflows that respond to business events in real-time.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item border-t border-neutral-200">
+          <button
+            x-on:click="activeItem = activeItem === 4 ? null : 4"
+            class="w-full text-left flex items-center gap-4 justify-between p-4 sm:p-5"
+          >
+            <div class="text-[11px] text-neutral-500">(004)</div>
+            <div class="flex-1 min-w-0">
+              <p class="font-medium tracking-tight text-neutral-900">MVP Development</p>
+            </div>
+            <div
+              class="shrink-0 h-8 w-8 rounded-full ring-1 flex items-center justify-center bg-neutral-200 ring-neutral-300 text-neutral-900"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4"
+                x-show="activeItem !== 4"
+              >
+                <path d="M5 12h14"></path>
+                <path d="M12 5v14"></path>
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4"
+                x-show="activeItem === 4"
+                x-cloak
+              >
+                <path d="M5 12h14"></path>
+              </svg>
+            </div>
+          </button>
+          <div x-show="activeItem === 4" x-collapse class="p-4 sm:p-6">
+            <p class="text-sm text-neutral-600">
+              Rapid prototyping and full-stack development with React, Laravel, and modern databases. From concept to deployed product, I build MVPs that validate ideas and scale with your business.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item border-t border-neutral-200">
+          <button
+            x-on:click="activeItem = activeItem === 5 ? null : 5"
+            class="w-full text-left flex items-center gap-4 justify-between p-4 sm:p-5"
+          >
+            <div class="text-[11px] text-neutral-500">(005)</div>
+            <div class="flex-1 min-w-0">
+              <p class="font-medium tracking-tight text-neutral-900">Strategy Planning</p>
+            </div>
+            <div
+              class="shrink-0 h-8 w-8 rounded-full ring-1 flex items-center justify-center bg-neutral-200 ring-neutral-300 text-neutral-900"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4"
+                x-show="activeItem !== 5"
+              >
+                <path d="M5 12h14"></path>
+                <path d="M12 5v14"></path>
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4"
+                x-show="activeItem === 5"
+                x-cloak
+              >
+                <path d="M5 12h14"></path>
+              </svg>
+            </div>
+          </button>
+          <div x-show="activeItem === 5" x-collapse class="p-4 sm:p-6">
+            <p class="text-sm text-neutral-600">
+              AI implementation roadmaps and technical architecture planning. I help identify opportunities, evaluate platforms, plan migrations, and build sustainable AI strategies aligned with business objectives.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item border-t border-neutral-200">
+          <button
+            x-on:click="activeItem = activeItem === 6 ? null : 6"
+            class="w-full text-left flex items-center gap-4 justify-between p-4 sm:p-5"
+          >
+            <div class="text-[11px] text-neutral-500">(006)</div>
+            <div class="flex-1 min-w-0">
+              <p class="font-medium tracking-tight text-neutral-900">Observability</p>
+            </div>
+            <div
+              class="shrink-0 h-8 w-8 rounded-full ring-1 flex items-center justify-center bg-neutral-200 ring-neutral-300 text-neutral-900"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4"
+                x-show="activeItem !== 6"
+              >
+                <path d="M5 12h14"></path>
+                <path d="M12 5v14"></path>
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4"
+                x-show="activeItem === 6"
+                x-cloak
+              >
+                <path d="M5 12h14"></path>
+              </svg>
+            </div>
+          </button>
+          <div x-show="activeItem === 6" x-collapse class="p-4 sm:p-6">
+            <p class="text-sm text-neutral-600">
+              Performance monitoring and analytics for AI systems. Track conversation quality, response times, user satisfaction, costs, and system health with comprehensive dashboards and alerting.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

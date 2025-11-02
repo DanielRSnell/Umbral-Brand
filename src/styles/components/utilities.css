@@ -1,0 +1,26 @@
+/**
+ * Utility Classes
+ *
+ * Additional utility classes for components that need specific styling
+ * that can't be achieved with Tailwind utilities alone.
+ */
+
+/* Chart canvas styles - for Chart.js canvas elements */
+.chart-canvas {
+  display: block;
+  box-sizing: border-box;
+  height: 12rem; /* 192px */
+  width: 100%;
+}
+
+/* Image filter utilities - adjusted grayscale effect */
+.img-grayscale-adjusted {
+  filter: grayscale(100%) saturate(0.7) contrast(1.1);
+}
+
+/* Animation states - for animated letter/text elements */
+.animate-letter {
+  display: inline-block;
+  opacity: 1;
+  transform: translateY(0);
+}
